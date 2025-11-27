@@ -15,9 +15,8 @@ export function Header() {
         <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <img src="/assets/icons/logo.svg" />
-          
 
-          {/* Navigation */}
+
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item, index) => (
               <a
