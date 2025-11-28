@@ -14,6 +14,7 @@ interface ExpertAuditsProps {
   description2?: string;
   badgeIcon?: string;
   cards: Card[];
+  footerText?: string;
 }
 
 export function ExpertAudits({
@@ -24,6 +25,7 @@ export function ExpertAudits({
   description2,
   badgeIcon,
   cards,
+  footerText,
 }: ExpertAuditsProps) {
   return (
     <section className="bg-[#0a0a0a] py-16 px-6 md:px-[10%]">
@@ -31,11 +33,14 @@ export function ExpertAudits({
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
           {label && <p className="text-gray-400 text-sm mb-4">{label}</p>}
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
-            {title}{" "}
-            {highlightedTitle && (
-              <span className="text-[#A9F125]">{highlightedTitle}</span>
-            )}
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent"
+            style={{
+              backgroundImage:
+                "linear-gradient(90deg, #F0F2C6 0%, #F0F2C6 28.23%, #A9F125 100%)",
+            }}
+          >
+            {title} {highlightedTitle}
           </h2>
         </div>
         {badgeIcon && (
@@ -95,6 +100,11 @@ export function ExpertAudits({
           </div>
         ))}
       </div>
+
+      {/* Footer Text */}
+      {footerText && (
+        <p className="text-gray-400 text-sm text-center mt-8">{footerText}</p>
+      )}
     </section>
   );
 }

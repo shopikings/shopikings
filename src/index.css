@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -56,7 +56,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
